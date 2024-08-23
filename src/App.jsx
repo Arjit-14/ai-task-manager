@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Notionkanban from "./components/Notionkanban";
 import axios from "axios";
-
+import logo from "./assets/logo.png";
 function App() {
   const [message, setMessage] = useState("");
   const [res, setRes] = useState([]);
@@ -71,11 +71,12 @@ function App() {
   };
 
   return (
-    <div className="bg-[#171717]">
+    <div className="bg-[#171717] ">
       <form
         onSubmit={handleSubmit}
         className="flex justify-center items-center gap-4 mt-6 mb-4"
       >
+        <img src={logo} alt="" srcset="" className=" size-44" />
         <input
           type="text"
           placeholder="Get your Plan PLANNED by AI"
